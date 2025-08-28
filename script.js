@@ -24,6 +24,17 @@ document.querySelectorAll(".call-btn").forEach(btn=>{
             alert("Not enough coins! you need at least 20 coins to make a call");
             return;
         }
-coinCount=-20;
+        else{
+    coinCount-=20;}
 coinDisplay.textContent=coinCount;
-alert(`Calling ${Service}`)
+alert(`Calling ${serviceName} (${number})`);
+const li= document.createElement("li");
+const time=new Date().toLocaleTimeString();
+li.innerHTML=`<div class="flex justify-between items-center">
+<div class="flex flex-col">${serviceName}<br>
+  ${number}</div>
+<div>${time}</div></div>`;
+li.classList.add("m-2","p-2");
+historyList.appendChild(li);
+    });
+});
