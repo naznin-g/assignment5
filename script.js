@@ -59,3 +59,8 @@ document.querySelectorAll(".copy-btn").forEach(btn=>{
         
     });
 });
+// clear history
+clearHistoryButton.addEventListener("click",()=>{
+    historyList.innerHTML="";
+
+});
