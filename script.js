@@ -7,7 +7,7 @@ const copyDisplay=document.getElementById("copy-count");
 const historyList=document.getElementById("history-list");
 const clearHistoryButton=document.getElementById("clear-history");
 
-
+//heart
 document.querySelectorAll(".heart-btn").forEach(btn=>{
     btn.addEventListener("click", ()=>{
         
@@ -15,6 +15,7 @@ document.querySelectorAll(".heart-btn").forEach(btn=>{
         heartDisplay.textContent=heartCount;
     });
 });
+//call
 document.querySelectorAll(".call-btn").forEach(btn=>{
     btn.addEventListener("click", ()=>{
         const card=btn.closest(".card");
@@ -36,5 +37,25 @@ li.innerHTML=`<div class="flex justify-between items-center">
 <div>${time}</div></div>`;
 li.classList.add("m-2","p-2");
 historyList.appendChild(li);
+    });
+});
+
+// copy
+document.querySelectorAll(".copy-btn").forEach(btn=>{
+    btn.addEventListener("click",()=>{
+        const card=btn.closest(".card");
+        const number=card.querySelector(".number").textContent;
+        navigator.clipboard.writeText(number)
+        .then(()=>{
+            alert(`Copied number:${number}`);
+            copyCount++;
+        copyDisplay.textContent=copyCount;
+
+        })
+        .catch(()=>{
+            alert("Failed to copy number!");
+        });
+        
+        
     });
 });
