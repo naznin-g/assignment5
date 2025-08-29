@@ -15,8 +15,9 @@
     
   </head>
   <body>
-    <header class="bg-white flex justify-between px-3 py-3">
-      <div class="logo flex gap-1">
+    <header class="bg-white sm:flex flex-col md:flex-row justify-between  px-4 py-3 items-center">
+       <!--flex justify-between px-3 py-3-->
+      <div class="logo flex gap-1 items-center">
         <img src="./assets/logo.png" alt="" class="w-[50px]" />
         <div class="">
           <h2 class="text-[#476700] text-3xl font-bold">
@@ -41,7 +42,7 @@
     <div class="bg-gradient-to-r from-[#263600]  via-[#446300] to-[#263600] flex flex-col justify-center items-center mx-auto px-3 py-3 ">
         <img src="./assets/logo.png" alt="" class="w-[92px]" />
         <h2 class="text-white font-bold">Emergency Service Directory</h2>
-        <p class="text-white font-semibold">Government Emergency Services at Your Fingertip – A Project by  Government of the People’s Republic of Bangladesh</p>
+        <p class="text-white font-semibold items-center">Government Emergency Services at Your Fingertip – A Project by  Government of the People’s Republic of Bangladesh</p>
 
 
     </div>
@@ -49,11 +50,11 @@
     <main class="bg-[#c5f6bf]">
     <section
         id="service-container"
-        class="w-11/12 mx-auto py-10 grid grid-cols-12 gap-8">
+        class="w-11/12 mx-auto py-10 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
       
-      <section id="service-card" class="col-span-9">
+      <section id="service-card" class="sm:col-span-1 md:col-span-2 lg:col-span-3">
 
-            <div class="grid grid-cols-3 gap-5 ">
+            <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 ">
               <!-- product card 1  -->
               <div id="card-1" class="card flex flex-col p-3 bg-white">
                 <div class="flex justify-between items-center p-2">
@@ -172,7 +173,7 @@
                     <h2 class="card-title font-bold text-black">Bangladesh Railway</h2>
                     <p class="font-medium text-gray-500">Rail Transport</p>
                     <h2 class="number font-bold text-black">131</h2>
-                    <button class="btn bg-gray-200 text-gray-500 w-1/2 rounded-full">Transportgit </button>
+                    <button class="btn bg-gray-200 text-gray-500 w-1/2 rounded-full">Transport</button>
                   </div>
                   <div class="flex gap-4 m-2 justify-between">
                     <button class="btn copy-btn bg-white text-gray-500 w-1/2  rounded-2xl"><i class='bx bx-copy' ></i>Copy</button>
@@ -183,8 +184,10 @@
               </div>
           </div>
         </div>
-        </section>
-        <section class="col-span-3 gap-2 p-4 bg-white rounded-xl">
+      </section>
+        <section class="col-span-1 gap-2 p-4 bg-white rounded-xl">
+          
+          <div>
           <div class="flex justify-between items-center mb-2">
             <h2 class="text-xl font-bold"><i class='bx bx-time'>Call history</i>
             </h2>
@@ -195,6 +198,7 @@
           </ul>
 
         </section>
+      </section>
 
         
       </section>
