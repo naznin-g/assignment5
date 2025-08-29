@@ -1,165 +1,45 @@
-## WELCOME TO ( সহজ সরল সিম্পল ) ASSIGNMENT-005
 
-### 📅 Deadline For 60 marks: 29th August, 2025 (11:59 pm ⏱️)
-
-### 📅 No Deadline For 50 marks
-
-### 📅 Deadline For 30 marks: Any time after 29th August.
-
----
-
-## ✅ Main Requirements (50 Marks)
-
-### 1. Navbar
-
-- **Website name & logo** on the left as Figma
-- **Heart icon, coin count (default-100), and Copy Count** on the right as Figma
-
----
-
-### 2. Hero Section
-
-- **Background Gradient** in the Whole Section
-- **A Relevant Logo** at the top-center
-- **Section Title** in the center
-- **A Relevant Slogan** in the bottom Center
-
----
-
-### 2. Main Section
-
-This Section will have layout as figma
-
-<table border=1 width="100%" cellpadding="50">
-<tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
- </tr>
- <tr>
-    <td colspan=9 >Card Section</td>
-    <td colspan=3>History Section</td>
- </tr>
-</table>
-
-### Emergency Hotline Section
-
-- **Show Minimum 6 cards**. Each card will contain:
-  - Icon or Image
-  - Relevant Name
-  - Relevant Name in English
-  - Hotline number for calling
-  - Category Badge
-  - 💗 icon at left
-  - **2 buttons** at the bottom: Copy and Call with icons as Figma
-
-### History Section
-
-- **A white Background** in the whole section
-- **History Title with icon** at the top-left as Figma
-- **Clear History Button** at the top-right as Figma
-
----
-
-### 3. Responsiveness (5 Marks)
-
-- Website should be fully **responsive for mobile devices** (implementation up to you)
-
----
-
-## Functionalities
-
-### 4. Heart Icons
-
-- Clicking on the 💗 **heart icon** of any card will increase the count in the Navbar
-
----
-
-### 5. Call Buttons
-
-- On clicking a card's **Call Button**, following actions will happen:
-  - Show an **alert** with a message including the service name and number
-  - Each call will **cut 20 coins**. Reduce Coin after each click.
-  - If coins are less than 20, show a relevant alert and terminate the process.
-  - Add this service into the **Call History section** with:
-    - Service name
-    - Service number
-
----
-
-### 5. Call History Section
-
-- Show all called services with name & number. This will empty initially. when call button clicked it will filled dynamically.
-- A **Clear History button** on the right
-- Clicking this button will remove all data from call history
-
----
-
-## Create Readme
-
-You have to create a `Readme.md` file. and write down following questions. Dont Try to copy paste from AI Tools. Just write what you know about these. If you don't know , then search , learn , understand and then write.
-
-### 6. Answer the following questions clearly:
 
 1. What is the difference between **getElementById, getElementsByClassName, and querySelector / querySelectorAll**?
+getElementById: Selects a single element by its unique id attribute
+and returns a single Element object, or null if no element with the specified ID is found.
+getElementsByClassName:Selects elements by their class name and returns a live HTMLCollection of elements that have the specified class. "Live" means the collection updates automatically if elements are added or removed from the DOM that match the class.
+querySelector:Selects the first element that matches a specified CSS selector (e.g., #id, .class, tagname, [attribute], or a combination) and returns a single Element object, or null if no matching element is found.
+querySelectorAll:Selects all elements that match a specified CSS selector and returns a static NodeList of elements. "Static" means the collection does not update automatically if the DOM changes after the selection is made.
 2. How do you **create and insert a new element into the DOM**?
+Creating Element using document.createElement()
+    const newParagraph = document.createElement('p');
+    then adding content
+    newParagraph.textContent = 'This paragraph was added dynamically!';
+    then the parent element where the new element shuld be inserted is found
+    const containerDiv = document.getElementById('container');
+    after that the element is inserted using appendChild()
+    containerDiv.appendChild(newParagraph);  
 3. What is **Event Bubbling** and how does it work?
+Event bubbling is the default JavaScript behavior in which a triggered event on a DOM element "bubbles" or propagates upward through its ancestors in the DOM hierarchy, to the root element
+How Event Bubbling Works
+Event Firing: An event occurs on a specific, deeply nested element (the target element), such as a click on a button within a div. 
+Target Element Handling: The event is initially handled by the target element itself. 
+Bubbling Up the DOM Tree: The event then "bubbles up" to the target element's parent. 
+Ancestor Handling: If any event handlers are attached to the parent element, they are also triggered. 
+Propagation Continues: This process repeats for the grandparent, great-grandparent, and so on, all the way up the DOM tree to the outermost element, like the <html> element or even the document object. 
+Event Delegation: This mechanism enables event delegation, where a single event listener on a parent element can manage events for many child elements, making the code more efficient and simpler to manage. 
 4. What is **Event Delegation** in JavaScript? Why is it useful?
+Event delegation is a JavaScript technique where a single event listener on a parent element handles events for all its child elements, rather than adding individual listeners to each child. 
+It's useful because it significantly improves performance and memory usage by reducing the number of event listeners, makes the code more maintainable by handling dynamically added or removed elements automatically, and simplifies event management by centralizing logic on the parent. 
 5. What is the difference between **preventDefault() and stopPropagation()** methods?
-
+This method prevents the browser's default action associated with a specific event from occurring.
+Example: Clicking a link typically navigates to the href URL. Calling event.preventDefault() within a click handler for that link will prevent the navigation, allowing custom handling of the click. Similarly, calling it on a form's submit event prevents the form from submitting.
+stopPropagation()
+This method halts the propagation of an event through the DOM tree, preventing it from reaching other elements in the capturing or bubbling phases.
+Example: If a button inside a div both have click event listeners, clicking the button would normally trigger both the button's click handler and then the div's click handler due to event bubbling. Calling event.stopPropagation() within the button's click handler would prevent the event from bubbling up to the div, thus only the button's handler would execute.
+Key Differences:
+Focus:
+preventDefault() targets the default behavior of an element for a given event, while stopPropagation() targets the flow of an event through the DOM.
+Effect:
+preventDefault() stops an action (like navigation or form submission), while stopPropagation() stops the event from being handled by parent or child elements in the event propagation path.
+Independence:
+These methods are independent. Calling preventDefault() does not stop propagation, and calling stopPropagation() does not prevent default actions. You can use them together if both effects are desired.
 ---
 
-## 🧪 Challenges Part (10 Marks)
 
-- On clicking the **Copy button**, show an alert and **increase the copy count** (3 Marks)
-
-- Hotline number will be **copied on click** so it can be pasted anywhere (4 Marks)
-
-💡Hint: You can ask for Help from `ChatGPT` Mamma . Just copy the below prompt , generate answer. use it with your own way.
-
-```bash
-I have a card with some text and a button inside it. I want that when a user clicks the button, some specific text from the card is copied to the clipboard using JavaScript. Please provide the code and explain it step by step.
-```
-
-- After clicking on the **Call button**, the **exact time of the call** will be shown in the Call History section (3 Marks)
-
-💡Hint: Search Google with that below question
-
-```bash
-How to get current local time in js
-```
-
----
-
-## ⚙️ Technology Stack
-
-- HTML
-- CSS ( Vanilla , Tailwind CSS , DaisyUI , Others - wheatever you like )
-- JavaScript ( Vanilla only. No Framework / Library Allowed )
-
----
-
-## 📌 Rules
-
-- ✅ Minimum **5 meaningful commits** required
-- ❌ No Lorem Ipsum or dummy placeholder text. Use **relevant content only**
-
----
-
-## 🔗 What to Submit
-
-- 📂 **GitHub Repository**
-- 🌐 **Live Link**
-
----
-
-# Let's Code and Achieve your Dream 🎯
